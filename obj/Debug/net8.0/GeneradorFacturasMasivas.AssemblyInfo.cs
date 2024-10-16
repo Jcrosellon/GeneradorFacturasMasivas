@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeneradorFacturasMasivas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9f6bfa7ac3dd0194bef26841cfb3593b5a10b98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35a576e4f11fc8a35eefa0e11aed47cb83f807b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeneradorFacturasMasivas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeneradorFacturasMasivas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

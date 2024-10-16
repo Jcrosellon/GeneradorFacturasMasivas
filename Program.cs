@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
-using PdfSharpCore.Drawing;
-using PdfSharpCore.Pdf;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace GeneradorFacturasMasivas
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string carpetaFacturas = "Facturas"; // Nombre de la carpeta para guardar las facturas
 
@@ -29,14 +29,17 @@ namespace GeneradorFacturasMasivas
 
                 // Agrupar las facturas por cliente y número de factura
                 var facturasAgrupadas = listaFacturas
-                    .GroupBy(f => new { f.Cliente, f.NumeroFactura })
-                    .Select(g => g.ToList())
-                    .ToList();
+    .GroupBy(f => new { f.Cliente, f.NumeroFactura })
+    .Select(g => g.ToList())
+    .ToList();
 
-                foreach (var grupo in facturasAgrupadas)
-                {
-                    GenerarPDF(grupo, carpetaFacturas); // Pasar la carpeta como parámetro
-                }
+// Asegúrate de que 'facturasAgrupadas' contenga los datos esperados
+foreach (var grupo in facturasAgrupadas)
+{
+    Console.WriteLine($"Grupo: Cliente = {grupo[0].Cliente}, NumeroFactura = {grupo[0].NumeroFactura}, Productos = {grupo.Count}");
+    await GenerarPDFDesdeReportServer(grupo, carpetaFacturas);
+}
+
 
                 Console.WriteLine("Facturas generadas exitosamente.");
             }
@@ -50,7 +53,7 @@ namespace GeneradorFacturasMasivas
         {
             List<Factura> facturas = new List<Factura>();
             string connectionString =
-                "Server=192.168.0.119;Database=TEST;User Id=sa;Password=HpMl110g7*;";
+                "Server=192.168.0.119;Database=TEST;User Id=sa;Password=HpMl110g7*;"; // Reemplaza por tu conexión
 
             string query =
                 "SELECT Cliente, NumeroFactura, Fecha, Producto, Cantidad, TotalVenta FROM MasivosPDF";
@@ -81,7 +84,6 @@ namespace GeneradorFacturasMasivas
                                 Cliente = cliente,
                                 NumeroFactura = numeroFactura,
                                 Fecha = reader["Fecha"] as DateTime? ?? DateTime.Now,
-                                // Las propiedades eliminadas no se utilizan
                             };
                             facturas.Add(factura);
                         }
@@ -110,275 +112,52 @@ namespace GeneradorFacturasMasivas
             return facturas;
         }
 
-        private static void GenerarPDF(List<Factura> facturas, string carpetaFacturas)
+        private static async Task GenerarPDFDesdeReportServer(List<Factura> facturas, string carpetaFacturas)
         {
             if (facturas.Count == 0)
                 return;
 
             string? cliente = facturas[0].Cliente;
             string? numeroFactura = facturas[0].NumeroFactura;
-            string? nombreArchivoPDF = Path.Combine(
-                carpetaFacturas,
-                $"factura_{cliente}_{numeroFactura}.pdf"
-            );
+            string nombreArchivoPDF = Path.Combine(carpetaFacturas, $"factura_{cliente}_{numeroFactura}.pdf");
 
-            PdfDocument document = new PdfDocument();
-            document.Info.Title = "Factura";
+            // Ajusta la URL del servidor de ReportServer
+            string reportServerUrl = "http://localhost:8080/ReportServer/api/report"; // Cambia a la URL de tu ReportServer
+ // Cambia a la URL de tu ReportServer
+            string reportName = "Factura"; // Nombre del reporte en ReportServer
+            string reportFormat = "pdf"; // Formato deseado
 
-            // Fuentes
-            XFont fontRegular = new XFont("Arial", 10, XFontStyle.Regular);
-            XFont fontBold = new XFont("Arial", 10, XFontStyle.Bold);
-            int rowHeight = 20;
-
-            // Cargar y dibujar el logo
-            XImage logo = XImage.FromFile("Logo/Logo.png");
-
-            // Configuración de dimensiones y posiciones para las tablas
-            int leftTableX = 20;
-            int rightTableX = 250; // Ajustado para tener margen
-            int tableWidth = 250; // Ajustado para tener margen
-            int startY = 100; // Margen superior
-            int marginBottom = 30; // Margen inferior
-            int yProductos = startY; // Para la posición de la tabla de productos
-
-            // Agregar la primera página
-            PdfPage page = document.AddPage();
-            page.Size = PdfSharpCore.PageSize.Letter; // Establecer tamaño carta
-            page.TrimMargins.All = 20; // Márgenes de 20 puntos en todos los lados
-            XGraphics gfx = XGraphics.FromPdfPage(page);
-
-            // Dibuja el logo
-            gfx.DrawImage(logo, 20, 20, 150, 75);
-
-            // Función para dibujar la información en la página
-            void DibujarInformacion()
+            using (HttpClient client = new HttpClient())
             {
-                // Tabla izquierda - Información de la empresa
-                gfx.DrawRectangle(XPens.Black, leftTableX, startY, tableWidth, rowHeight);
-                gfx.DrawString(
-                    "LOGISTICA FERRETERA S.A.S. - NIT 900,236,553-1",
-                    fontBold,
-                    XBrushes.Black,
-                    new XRect(leftTableX, startY, tableWidth, rowHeight),
-                    XStringFormats.Center
-                );
+                // Crear la URL del reporte con parámetros
+                var reportUrl = $"{reportServerUrl}/{reportName}.{reportFormat}?cliente={cliente}&numeroFactura={numeroFactura}";
 
-                string[,] infoEmpresa =
+                try
                 {
-                    { "Dirección", "CEDI Paloquemao : Carrera 22 # 19-95" },
-                    { "Vendedor", "CARLOS ARIAS" },
-                    { "Telefonos", "(+57) 300 912 7030" },
-                };
+                    // Obtener el reporte en formato PDF
+                    HttpResponseMessage response = await client.GetAsync(reportUrl);
 
-                for (int i = 0; i < infoEmpresa.GetLength(0); i++)
-                {
-                    int yPos = startY + rowHeight + (i * rowHeight);
-                    gfx.DrawRectangle(XPens.Black, leftTableX, yPos, tableWidth, rowHeight);
-
-                    // Columna de etiqueta
-                    gfx.DrawRectangle(XPens.Black, leftTableX, yPos, 60, rowHeight);
-                    gfx.DrawString(
-                        infoEmpresa[i, 0],
-                        fontBold,
-                        XBrushes.Black,
-                        new XRect(leftTableX, yPos, 60, rowHeight),
-                        XStringFormats.Center
-                    );
-
-                    // Columna de valor
-                    gfx.DrawString(
-                        infoEmpresa[i, 1],
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(leftTableX + 65, yPos, tableWidth - 65, rowHeight),
-                        XStringFormats.CenterLeft
-                    );
-                }
-
-                // Tabla derecha
-                gfx.DrawRectangle(XPens.Black, rightTableX, startY, tableWidth, rowHeight);
-                gfx.DrawString(
-                    "REGIMEN COMUN",
-                    fontBold,
-                    XBrushes.Black,
-                    new XRect(rightTableX, startY, tableWidth, rowHeight),
-                    XStringFormats.Center
-                );
-
-                // ANEXO FACT.ELECTR.No y FECHA
-                string[,] infoFactura =
-                {
-                    { "ANEXO FACT.ELECTR.No:", $"FE    {numeroFactura}" },
-                    { "FECHA :", facturas[0].Fecha.ToString("MMM/dd/yyyy") },
-                };
-
-                for (int i = 0; i < infoFactura.GetLength(0); i++)
-                {
-                    int yPos = startY + rowHeight + (i * rowHeight);
-                    gfx.DrawRectangle(XPens.Black, rightTableX, yPos, tableWidth, rowHeight);
-
-                    gfx.DrawString(
-                        infoFactura[i, 0],
-                        fontBold,
-                        XBrushes.Black,
-                        new XRect(rightTableX, yPos, tableWidth, rowHeight),
-                        XStringFormats.Center
-                    );
-
-                    gfx.DrawString(
-                        infoFactura[i, 1],
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(rightTableX + tableWidth / 2, yPos, tableWidth / 2, rowHeight),
-                        XStringFormats.Center
-                    );
-                }
-
-                // Mostrar datos del cliente
-                int clienteHeaderY = startY + rowHeight * (infoEmpresa.GetLength(0) + 1);
-                string?[,] datosCliente =
-                {
-                    { "Razón Social:", facturas[0].Cliente },
-                };
-
-                for (int i = 0; i < datosCliente.GetLength(0); i++)
-                {
-                    int yPos = clienteHeaderY + rowHeight + (i * rowHeight);
-                    gfx.DrawRectangle(XPens.Black, rightTableX, yPos, tableWidth, rowHeight);
-                    gfx.DrawString(
-                        datosCliente[i, 0],
-                        fontBold,
-                        XBrushes.Black,
-                        new XRect(rightTableX + 5, yPos, tableWidth / 2, rowHeight),
-                        XStringFormats.CenterLeft
-                    );
-
-                    gfx.DrawString(
-                        datosCliente[i, 1],
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(rightTableX + tableWidth / 2, yPos, tableWidth / 2, rowHeight),
-                        XStringFormats.Center
-                    );
-                }
-            }
-
-            // Dibujar información del cliente solo en la primera página
-            DibujarInformacion();
-
-            // Producto
-            int yProductosHeader = startY + rowHeight * (facturas[0].Cliente != null ? 4 : 3); // Ajusta según el número de filas
-            gfx.DrawRectangle(
-                XPens.Black,
-                leftTableX,
-                yProductosHeader,
-                tableWidth * 2 + 5,
-                rowHeight
-            );
-            gfx.DrawString(
-                "PRODUCTOS",
-                fontBold,
-                XBrushes.Black,
-                new XRect(leftTableX, yProductosHeader, tableWidth * 2 + 5, rowHeight),
-                XStringFormats.Center
-            );
-
-            yProductos = yProductosHeader + rowHeight;
-
-            // Dibujar los productos
-            foreach (var factura in facturas)
-            {
-                foreach (var producto in factura.Productos)
-                {
-                    // Verificar si es necesario agregar una nueva página
-                    if (yProductos + rowHeight > page.Height - marginBottom) // Se puede ajustar según el espacio disponible
+                    if (response.IsSuccessStatusCode)
                     {
-                        page = document.AddPage();
-                        page.Size = PdfSharpCore.PageSize.Letter;
-                        page.TrimMargins.All = 20;
-                        gfx = XGraphics.FromPdfPage(page);
-                        yProductos = startY; // Reiniciar posición para la nueva página
-
-                        // En las páginas siguientes, solo dibujar los productos
-                        int yProductosHeaderNextPage = startY; // Ajusta la posición para la nueva página
-                        gfx.DrawRectangle(
-                            XPens.Black,
-                            leftTableX,
-                            yProductosHeaderNextPage,
-                            tableWidth * 2 + 5,
-                            rowHeight
-                        );
-                        gfx.DrawString(
-                            "PRODUCTOS",
-                            fontBold,
-                            XBrushes.Black,
-                            new XRect(
-                                leftTableX,
-                                yProductosHeaderNextPage,
-                                tableWidth * 2 + 5,
-                                rowHeight
-                            ),
-                            XStringFormats.Center
-                        );
-
-                        yProductos = yProductosHeaderNextPage + rowHeight; // Actualiza la posición de los productos
+                        byte[] reportData = await response.Content.ReadAsByteArrayAsync();
+                        // Guardar el archivo PDF
+                        await File.WriteAllBytesAsync(nombreArchivoPDF, reportData);
+                        Console.WriteLine($"Factura {numeroFactura} generada y guardada.");
                     }
-
-                    gfx.DrawRectangle(
-                        XPens.Black,
-                        leftTableX,
-                        yProductos,
-                        tableWidth * 2 + 5,
-                        rowHeight
-                    );
-                    gfx.DrawString(
-                        producto.Descripcion,
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(leftTableX, yProductos, tableWidth, rowHeight),
-                        XStringFormats.CenterLeft
-                    );
-
-                    gfx.DrawString(
-                        producto.Cantidad.ToString(),
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(leftTableX + tableWidth, yProductos, tableWidth / 4, rowHeight),
-                        XStringFormats.Center
-                    );
-
-                    gfx.DrawString(
-                        $"{producto.VrUnitario:C}",
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(
-                            leftTableX + tableWidth + tableWidth / 4,
-                            yProductos,
-                            tableWidth / 4,
-                            rowHeight
-                        ),
-                        XStringFormats.Center
-                    );
-
-                    gfx.DrawString(
-                        $"{producto.VrTotal:C}",
-                        fontRegular,
-                        XBrushes.Black,
-                        new XRect(
-                            leftTableX + tableWidth * 2,
-                            yProductos,
-                            tableWidth / 4,
-                            rowHeight
-                        ),
-                        XStringFormats.Center
-                    );
-
-                    yProductos += rowHeight;
+                    else
+                    {
+                        Console.WriteLine($"Error al generar la factura {numeroFactura}: {response.ReasonPhrase}");
+                    }
+                }
+                catch (HttpRequestException httpEx)
+                {
+                    Console.WriteLine($"Error de conexión al servidor de ReportServer: {httpEx.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error inesperado: {ex.Message}");
                 }
             }
-
-            // Guardar el documento
-            document.Save(nombreArchivoPDF);
         }
     }
 

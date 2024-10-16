@@ -1,0 +1,12 @@
+<reportServer>
+    <database>
+        <connection>
+            <url>jdbc:sqlserver://your_database_server;databaseName=your_database</url>
+            <username>your_username</username>
+            <password>your_password</password>
+        </connection>
+    </database>
+    <settings>
+        <property name="report_directory">/path/to/report/directory</property>
+    </settings>
+</reportServer>

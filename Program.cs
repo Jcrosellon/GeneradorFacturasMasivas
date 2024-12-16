@@ -12,9 +12,8 @@ namespace GeneradorFacturasMasivas
     {
         static async Task Main(string[] args)
         {
-            string carpetaFacturas = "Facturas"; // Nombre de la carpeta para guardar las facturas
+            string carpetaFacturas = "Facturas";
 
-            // Verificar si la carpeta existe, si no, crearla
             if (!Directory.Exists(carpetaFacturas))
             {
                 Directory.CreateDirectory(carpetaFacturas);
@@ -27,21 +26,20 @@ namespace GeneradorFacturasMasivas
             {
                 Console.WriteLine($"{listaFacturas.Count} facturas encontradas. Generando PDFs...");
 
-                // Agrupar las facturas por cliente y número de factura
                 var facturasAgrupadas = listaFacturas
-    .GroupBy(f => new { f.Cliente, f.NumeroFactura })
-    .Select(g => g.ToList())
-    .ToList();
+                    .GroupBy(f => new { f.Cliente, f.NumeroFactura })
+                    .Select(g => g.ToList())
+                    .ToList();
 
-// Asegúrate de que 'facturasAgrupadas' contenga los datos esperados
-foreach (var grupo in facturasAgrupadas)
-{
-    Console.WriteLine($"Grupo: Cliente = {grupo[0].Cliente}, NumeroFactura = {grupo[0].NumeroFactura}, Productos = {grupo.Count}");
-    await GenerarPDFDesdeReportServer(grupo, carpetaFacturas);
-}
+                foreach (var grupo in facturasAgrupadas)
+                {
+                    Console.WriteLine(
+                        $"Generando PDF para Cliente = {grupo[0].Cliente}, NumeroFactura = {grupo[0].NumeroFactura}"
+                    );
+                    await GenerarPDFDesdeReportServer(grupo, carpetaFacturas);
+                }
 
-
-                Console.WriteLine("Facturas generadas exitosamente.");
+                Console.WriteLine("Todas las facturas se generaron exitosamente.");
             }
             else
             {
@@ -53,15 +51,13 @@ foreach (var grupo in facturasAgrupadas)
         {
             List<Factura> facturas = new List<Factura>();
             string connectionString =
-                "Server=192.168.0.119;Database=TEST;User Id=sa;Password=HpMl110g7*;"; // Reemplaza por tu conexión
-
+                "Server=localhost;Database=TEST;User Id=sa;Password=pazJc2601;";
             string query =
                 "SELECT Cliente, NumeroFactura, Fecha, Producto, Cantidad, TotalVenta FROM MasivosPDF";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-
                 try
                 {
                     connection.Open();
@@ -72,11 +68,9 @@ foreach (var grupo in facturasAgrupadas)
                         string cliente = reader["Cliente"]?.ToString() ?? string.Empty;
                         string numeroFactura = reader["NumeroFactura"]?.ToString() ?? string.Empty;
 
-                        // Busca la factura en la lista existente
                         var factura = facturas.FirstOrDefault(f =>
                             f.Cliente == cliente && f.NumeroFactura == numeroFactura
                         );
-
                         if (factura == null)
                         {
                             factura = new Factura
@@ -88,70 +82,72 @@ foreach (var grupo in facturasAgrupadas)
                             facturas.Add(factura);
                         }
 
-                        // Crear un nuevo producto y agregarlo a la factura
                         Producto producto = new Producto
                         {
                             Cantidad = Convert.ToInt32(reader["Cantidad"]),
                             Descripcion = reader["Producto"]?.ToString() ?? string.Empty,
-                            Iva = 0.0m, // Ajusta esto según tu lógica para calcular el IVA
                             VrUnitario =
                                 Convert.ToDecimal(reader["TotalVenta"])
                                 / Convert.ToInt32(reader["Cantidad"]),
                             VrTotal = Convert.ToDecimal(reader["TotalVenta"]),
+                            Iva = 0.0m,
                         };
                         factura.Productos.Add(producto);
                     }
-                    reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error al acceder a la base de datos: " + ex.Message);
+                    Console.WriteLine($"Error al acceder a la base de datos: {ex.Message}");
                 }
             }
-
             return facturas;
         }
 
-        private static async Task GenerarPDFDesdeReportServer(List<Factura> facturas, string carpetaFacturas)
+        private static async Task GenerarPDFDesdeReportServer(
+            List<Factura> facturas,
+            string carpetaFacturas
+        )
         {
-            if (facturas.Count == 0)
+            if (facturas == null || facturas.Count == 0)
+            {
+                Console.WriteLine("No se puede generar PDF. Lista vacía.");
                 return;
+            }
 
-            string? cliente = facturas[0].Cliente;
-            string? numeroFactura = facturas[0].NumeroFactura;
-            string nombreArchivoPDF = Path.Combine(carpetaFacturas, $"factura_{cliente}_{numeroFactura}.pdf");
+            string cliente = facturas[0]?.Cliente.Replace(" ", "_") ?? "ClienteDesconocido";
+            string numeroFactura = facturas[0]?.NumeroFactura ?? "FacturaDesconocida";
+            string nombreArchivoPDF = Path.Combine(
+                carpetaFacturas,
+                $"factura_{cliente}_{numeroFactura}.pdf"
+            );
 
-            // Ajusta la URL del servidor de ReportServer
-            string reportServerUrl = "http://localhost:8080/ReportServer/api/report"; // Cambia a la URL de tu ReportServer
- // Cambia a la URL de tu ReportServer
-            string reportName = "Factura"; // Nombre del reporte en ReportServer
-            string reportFormat = "pdf"; // Formato deseado
-
+            // URL ajustada para ReportServer
+            string reportServerUrl =
+                "http://localhost:8081/reportserver/reports/FacturaReport.rdlc";
+            var reportUrl = $"{reportServerUrl}?cliente={cliente}&numeroFactura={numeroFactura}";
             using (HttpClient client = new HttpClient())
             {
-                // Crear la URL del reporte con parámetros
-                var reportUrl = $"{reportServerUrl}/{reportName}.{reportFormat}?cliente={cliente}&numeroFactura={numeroFactura}";
-
                 try
                 {
-                    // Obtener el reporte en formato PDF
                     HttpResponseMessage response = await client.GetAsync(reportUrl);
 
                     if (response.IsSuccessStatusCode)
                     {
-                        byte[] reportData = await response.Content.ReadAsByteArrayAsync();
-                        // Guardar el archivo PDF
-                        await File.WriteAllBytesAsync(nombreArchivoPDF, reportData);
-                        Console.WriteLine($"Factura {numeroFactura} generada y guardada.");
+                        var pdfBytes = await response.Content.ReadAsByteArrayAsync();
+                        await File.WriteAllBytesAsync(nombreArchivoPDF, pdfBytes);
+                        Console.WriteLine($"Reporte guardado en {nombreArchivoPDF}");
                     }
                     else
                     {
-                        Console.WriteLine($"Error al generar la factura {numeroFactura}: {response.ReasonPhrase}");
+                        string errorMessage = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine(
+                            $"Error al obtener el reporte: {response.StatusCode} - {errorMessage}"
+                        );
                     }
                 }
-                catch (HttpRequestException httpEx)
+                catch (HttpRequestException ex)
                 {
-                    Console.WriteLine($"Error de conexión al servidor de ReportServer: {httpEx.Message}");
+                    Console.WriteLine($"Error de conexión: {ex.Message}");
                 }
                 catch (Exception ex)
                 {

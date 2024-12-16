@@ -1,0 +1,447 @@
+16-Dec-2024 12:53:18.362 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.97
+16-Dec-2024 12:53:18.373 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Nov 6 2024 19:55:19 UTC
+16-Dec-2024 12:53:18.374 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.97.0
+16-Dec-2024 12:53:18.374 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Mac OS X
+16-Dec-2024 12:53:18.375 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      13.6.4
+16-Dec-2024 12:53:18.376 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      x86_64
+16-Dec-2024 12:53:18.377 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /Users/mariapaz/.sdkman/candidates/java/17.0.8.1-tem
+16-Dec-2024 12:53:18.377 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.8.1+1
+16-Dec-2024 12:53:18.378 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Eclipse Adoptium
+16-Dec-2024 12:53:18.378 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 12:53:18.378 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 12:53:18.418 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2024 12:53:18.418 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2024 12:53:18.418 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 12:53:18.419 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2024 12:53:18.419 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2024 12:53:18.419 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/conf/logging.properties
+16-Dec-2024 12:53:18.419 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2024 12:53:18.421 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.security.egd=file:/dev/urandom
+16-Dec-2024 12:53:18.422 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2024 12:53:18.423 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2024 12:53:18.423 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2024 12:53:18.427 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Drs.configdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/reportserver/WEB-INF
+16-Dec-2024 12:53:18.427 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Xmx4096M
+16-Dec-2024 12:53:18.428 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dfile.encoding=UTF8
+16-Dec-2024 12:53:18.428 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.net=ALL-UNNAMED
+16-Dec-2024 12:53:18.428 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+16-Dec-2024 12:53:18.429 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.reflect=ALL-UNNAMED
+16-Dec-2024 12:53:18.429 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+16-Dec-2024 12:53:18.431 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 12:53:18.431 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.ref=ALL-UNNAMED
+16-Dec-2024 12:53:18.433 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+16-Dec-2024 12:53:18.433 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/sun.reflect.generics.repository=ALL-UNNAMED
+16-Dec-2024 12:53:18.434 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+16-Dec-2024 12:53:18.434 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 12:53:18.435 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 12:53:18.435 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/temp
+16-Dec-2024 12:53:18.928 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/Users/mariapaz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+16-Dec-2024 12:53:26.272 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8081"]
+
+16-Dec-2024 12:53:26.539 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [13170] milliseconds
+16-Dec-2024 12:53:27.282 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+16-Dec-2024 12:53:27.283 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.97]
+16-Dec-2024 12:56:56.138 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:31.645 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/docs] de la aplicación web
+16-Dec-2024 13:04:36.993 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:37.334 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/docs] has finished in [5.685] ms
+16-Dec-2024 13:04:37.336 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/manager] de la aplicación web
+16-Dec-2024 13:04:40.760 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:40.954 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/manager] has finished in [3.618] ms
+16-Dec-2024 13:04:40.955 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/examples] de la aplicación web
+16-Dec-2024 13:04:48.345 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:48.560 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/examples] has finished in [7.535] ms
+16-Dec-2024 13:04:48.561 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/ROOT] de la aplicación web
+16-Dec-2024 13:04:51.338 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:51.395 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/ROOT] has finished in [2.834] ms
+16-Dec-2024 13:04:51.397 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/host-manager] de la aplicación web
+16-Dec-2024 13:04:53.733 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:04:53.738 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/host-manager] has finished in [2.341] ms
+16-Dec-2024 13:04:53.755 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:04:53.930 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [687216] milliseconds
+16-Dec-2024 13:04:53.944 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:04:53.952 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:47.070 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+16-Dec-2024 13:06:47.074 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:06:47.083 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+16-Dec-2024 13:06:55.995 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.97
+16-Dec-2024 13:06:56.175 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Nov 6 2024 19:55:19 UTC
+16-Dec-2024 13:06:56.200 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.97.0
+16-Dec-2024 13:06:56.200 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Mac OS X
+16-Dec-2024 13:06:56.200 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      13.6.4
+16-Dec-2024 13:06:56.200 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      x86_64
+16-Dec-2024 13:06:56.201 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /Users/mariapaz/.sdkman/candidates/java/17.0.8.1-tem
+16-Dec-2024 13:06:56.201 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.8.1+1
+16-Dec-2024 13:06:56.202 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Eclipse Adoptium
+16-Dec-2024 13:06:56.202 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:06:56.207 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:06:56.226 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2024 13:06:56.226 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2024 13:06:56.227 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:06:56.227 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2024 13:06:56.227 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2024 13:06:56.229 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/conf/logging.properties
+16-Dec-2024 13:06:56.230 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2024 13:06:56.230 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.security.egd=file:/dev/urandom
+16-Dec-2024 13:06:56.231 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2024 13:06:56.231 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2024 13:06:56.231 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2024 13:06:56.231 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Drs.configdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/reportserver/WEB-INF
+16-Dec-2024 13:06:56.231 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Xmx4096M
+16-Dec-2024 13:06:56.232 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dfile.encoding=UTF8
+16-Dec-2024 13:06:56.232 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.net=ALL-UNNAMED
+16-Dec-2024 13:06:56.232 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+16-Dec-2024 13:06:56.232 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.reflect=ALL-UNNAMED
+16-Dec-2024 13:06:56.233 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+16-Dec-2024 13:06:56.233 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:06:56.234 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.ref=ALL-UNNAMED
+16-Dec-2024 13:06:56.234 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+16-Dec-2024 13:06:56.234 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/sun.reflect.generics.repository=ALL-UNNAMED
+16-Dec-2024 13:06:56.235 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+16-Dec-2024 13:06:56.239 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:06:56.239 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:06:56.240 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/temp
+16-Dec-2024 13:06:56.649 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/Users/mariapaz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+16-Dec-2024 13:06:58.977 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [reportserver] registró el conductor JDBC [com.microsoft.sqlserver.jdbc.SQLServerDriver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+16-Dec-2024 13:06:58.990 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [org.apache.commons.vfs2.cache.SoftRefFilesCache$ReleaseThread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ java.base@17.0.8.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ org.apache.commons.vfs2.cache.SoftRefFilesCache$ReleaseThread.run(SoftRefFilesCache.java:54)
+16-Dec-2024 13:06:58.991 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lvufwk1isrcf2|58d002f8]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ java.base@17.0.8.1/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base@17.0.8.1/java.util.TimerThread.run(Timer.java:516)
+16-Dec-2024 13:06:58.992 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lvufwk1isrcf2|58d002f8]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:06:59.041 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lvufwk1isrcf2|58d002f8]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:06:59.045 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lvufwk1isrcf2|58d002f8]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:06:59.047 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-JpaEventLoggerServiceImpl-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonImpl.run(DwDaemonImpl.java:52)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.061 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-watchdog-JpaEventLoggerServiceImpl] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonWatchdog.run(DwDaemonWatchdog.java:30)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.062 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [Thread-21] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/sun.nio.ch.KQueue.poll(Native Method)
+ java.base@17.0.8.1/sun.nio.ch.KQueuePort$EventHandlerTask.poll(KQueuePort.java:200)
+ java.base@17.0.8.1/sun.nio.ch.KQueuePort$EventHandlerTask.run(KQueuePort.java:287)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.065 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [sshd-SshServer[727d336a](port=8022)-timer-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.067 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-MaintenanceServiceImpl-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonImpl.run(DwDaemonImpl.java:52)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.069 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-watchdog-MaintenanceServiceImpl] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonWatchdog.run(DwDaemonWatchdog.java:30)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.080 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [scheduler-watchdog] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.scheduler.service.scheduler.SchedulerWatchdog.run(SchedulerWatchdog.java:32)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:06:59.081 GRAVE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks La aplicación web [reportserver] creó un ThreadLocal con clave del tipo [java.lang.ThreadLocal] (valor [java.lang.ThreadLocal@563da917]) y un valor del tipo [org.hibernate.internal.SessionImpl] (valor [SessionImpl(1732752108<closed>)]) pero no pudo quitarlo cuando la aplicación web se paró. Los hilos se van a renovar con el tiempo para intentar evitar in posible fallo de memoria.
+16-Dec-2024 13:06:59.342 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:06:59.378 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:07:03.602 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8081"]
+
+16-Dec-2024 13:07:03.814 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [12127] milliseconds
+16-Dec-2024 13:07:04.155 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+16-Dec-2024 13:07:04.159 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.97]
+16-Dec-2024 13:09:05.384 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:30.644 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/docs] de la aplicación web
+16-Dec-2024 13:19:33.854 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:35.091 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/docs] has finished in [4.447] ms
+16-Dec-2024 13:19:35.092 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/manager] de la aplicación web
+16-Dec-2024 13:19:38.513 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:38.558 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/manager] has finished in [3.466] ms
+16-Dec-2024 13:19:38.559 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/examples] de la aplicación web
+16-Dec-2024 13:19:44.642 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:44.833 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/examples] has finished in [6.274] ms
+16-Dec-2024 13:19:44.834 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/ROOT] de la aplicación web
+16-Dec-2024 13:19:47.569 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:47.587 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/ROOT] has finished in [2.754] ms
+16-Dec-2024 13:19:47.588 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/host-manager] de la aplicación web
+16-Dec-2024 13:19:50.107 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2024 13:19:50.198 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/host-manager] has finished in [2.611] ms
+16-Dec-2024 13:19:50.236 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:19:50.354 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [766560] milliseconds
+16-Dec-2024 13:19:50.396 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:19:50.398 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:19:50.400 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:19:50.402 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:19:50.403 GRAVE [http-nio-8081-Acceptor] org.apache.tomcat.util.net.NioEndpoint.setSocketOptions Error setting socket options
+	java.net.SocketException: Invalid argument
+		at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:455)
+		at java.base/sun.nio.ch.Net.setSocketOption(Net.java:393)
+		at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:280)
+		at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:247)
+		at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:285)
+		at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:226)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:500)
+		at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:71)
+		at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:149)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:44:39.647 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+16-Dec-2024 13:44:39.677 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:44:39.689 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+16-Dec-2024 13:44:55.156 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.97
+16-Dec-2024 13:44:55.173 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Nov 6 2024 19:55:19 UTC
+16-Dec-2024 13:44:55.174 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.97.0
+16-Dec-2024 13:44:55.174 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Mac OS X
+16-Dec-2024 13:44:55.174 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      13.6.4
+16-Dec-2024 13:44:55.175 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      x86_64
+16-Dec-2024 13:44:55.193 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /Users/mariapaz/.sdkman/candidates/java/17.0.8.1-tem
+16-Dec-2024 13:44:55.194 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.8.1+1
+16-Dec-2024 13:44:55.194 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Eclipse Adoptium
+16-Dec-2024 13:44:55.195 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:44:55.195 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:44:55.228 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2024 13:44:55.228 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2024 13:44:55.229 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:44:55.230 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2024 13:44:55.613 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2024 13:44:55.613 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/conf/logging.properties
+16-Dec-2024 13:44:55.613 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2024 13:44:55.613 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.security.egd=file:/dev/urandom
+16-Dec-2024 13:44:55.614 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2024 13:44:55.616 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2024 13:44:55.621 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2024 13:44:55.629 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Drs.configdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/reportserver/WEB-INF
+16-Dec-2024 13:44:55.630 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Xmx4096M
+16-Dec-2024 13:44:55.631 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dfile.encoding=UTF8
+16-Dec-2024 13:44:55.632 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.net=ALL-UNNAMED
+16-Dec-2024 13:44:55.633 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+16-Dec-2024 13:44:55.634 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.reflect=ALL-UNNAMED
+16-Dec-2024 13:44:55.634 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+16-Dec-2024 13:44:55.634 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:44:55.634 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.ref=ALL-UNNAMED
+16-Dec-2024 13:44:55.634 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+16-Dec-2024 13:44:55.635 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/sun.reflect.generics.repository=ALL-UNNAMED
+16-Dec-2024 13:44:55.635 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+16-Dec-2024 13:44:55.636 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:44:55.636 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:44:55.636 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/temp
+16-Dec-2024 13:44:55.697 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/Users/mariapaz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+16-Dec-2024 13:45:11.297 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8081"]
+
+16-Dec-2024 13:45:11.606 GRAVE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Fallo al iniciar el componente [Connector["http-nio-8081"]]
+	org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1027)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:525)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:986)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:686)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:268)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:223)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1373)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1386)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:663)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1025)
+		... 13 more
+16-Dec-2024 13:45:11.609 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [23034] milliseconds
+16-Dec-2024 13:45:12.569 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+16-Dec-2024 13:45:12.572 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.97]
+16-Dec-2024 13:48:17.111 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [reportserver] registró el conductor JDBC [com.microsoft.sqlserver.jdbc.SQLServerDriver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+16-Dec-2024 13:48:17.121 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [org.apache.commons.vfs2.cache.SoftRefFilesCache$ReleaseThread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ java.base@17.0.8.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ org.apache.commons.vfs2.cache.SoftRefFilesCache$ReleaseThread.run(SoftRefFilesCache.java:54)
+16-Dec-2024 13:48:17.122 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lwa84x1i5shqs|426e6c94]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ java.base@17.0.8.1/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base@17.0.8.1/java.util.TimerThread.run(Timer.java:516)
+16-Dec-2024 13:48:17.126 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lwa84x1i5shqs|426e6c94]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:48:17.127 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lwa84x1i5shqs|426e6c94]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:48:17.129 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->z8kfltb71lwa84x1i5shqs|426e6c94]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+16-Dec-2024 13:48:17.130 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-JpaEventLoggerServiceImpl-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonImpl.run(DwDaemonImpl.java:52)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.130 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-watchdog-JpaEventLoggerServiceImpl] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonWatchdog.run(DwDaemonWatchdog.java:30)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.133 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [Thread-21] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/sun.nio.ch.KQueue.poll(Native Method)
+ java.base@17.0.8.1/sun.nio.ch.KQueuePort$EventHandlerTask.poll(KQueuePort.java:200)
+ java.base@17.0.8.1/sun.nio.ch.KQueuePort$EventHandlerTask.run(KQueuePort.java:287)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.135 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [sshd-SshServer[4cac2be1](port=8022)-timer-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.136 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-MaintenanceServiceImpl-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonImpl.run(DwDaemonImpl.java:52)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.137 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [dwdaemon-watchdog-MaintenanceServiceImpl] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.rs.utils.daemon.DwDaemonWatchdog.run(DwDaemonWatchdog.java:30)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.139 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [reportserver] appears to have started a thread named [scheduler-watchdog] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/java.lang.Thread.sleep(Native Method)
+ net.datenwerke.scheduler.service.scheduler.SchedulerWatchdog.run(SchedulerWatchdog.java:32)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+16-Dec-2024 13:48:17.140 GRAVE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks La aplicación web [reportserver] creó un ThreadLocal con clave del tipo [java.lang.ThreadLocal] (valor [java.lang.ThreadLocal@6e99458b]) y un valor del tipo [org.hibernate.internal.SessionImpl] (valor [SessionImpl(828176458<closed>)]) pero no pudo quitarlo cuando la aplicación web se paró. Los hilos se van a renovar con el tiempo para intentar evitar in posible fallo de memoria.
+16-Dec-2024 13:48:17.661 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:48:17.673 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+16-Dec-2024 13:51:08.613 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.97
+16-Dec-2024 13:51:08.644 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Nov 6 2024 19:55:19 UTC
+16-Dec-2024 13:51:08.645 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.97.0
+16-Dec-2024 13:51:08.645 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Mac OS X
+16-Dec-2024 13:51:08.649 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      13.6.4
+16-Dec-2024 13:51:09.100 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      x86_64
+16-Dec-2024 13:51:09.101 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /Users/mariapaz/.sdkman/candidates/java/17.0.8.1-tem
+16-Dec-2024 13:51:09.102 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.8.1+1
+16-Dec-2024 13:51:09.102 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Eclipse Adoptium
+16-Dec-2024 13:51:09.104 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:51:09.104 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:51:09.339 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2024 13:51:09.339 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2024 13:51:09.340 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:51:09.340 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2024 13:51:09.340 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2024 13:51:09.341 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/conf/logging.properties
+16-Dec-2024 13:51:09.342 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2024 13:51:09.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.security.egd=file:/dev/urandom
+16-Dec-2024 13:51:09.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2024 13:51:09.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2024 13:51:09.348 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2024 13:51:09.348 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Drs.configdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/webapps/reportserver/WEB-INF
+16-Dec-2024 13:51:09.349 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Xmx4096M
+16-Dec-2024 13:51:09.350 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dfile.encoding=UTF8
+16-Dec-2024 13:51:09.350 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.net=ALL-UNNAMED
+16-Dec-2024 13:51:09.351 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED
+16-Dec-2024 13:51:09.351 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/jdk.internal.reflect=ALL-UNNAMED
+16-Dec-2024 13:51:09.352 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+16-Dec-2024 13:51:09.353 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2024 13:51:09.353 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.ref=ALL-UNNAMED
+16-Dec-2024 13:51:09.353 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+16-Dec-2024 13:51:09.354 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/sun.reflect.generics.repository=ALL-UNNAMED
+16-Dec-2024 13:51:09.354 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+16-Dec-2024 13:51:09.354 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:51:09.355 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97
+16-Dec-2024 13:51:09.356 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/Users/mariapaz/GeneradorFacturasMasivas/apache-tomcat-9.0.97/temp
+16-Dec-2024 13:51:10.572 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/Users/mariapaz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+16-Dec-2024 13:51:24.975 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8081"]
+
+16-Dec-2024 13:51:26.860 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [30176] milliseconds
+16-Dec-2024 13:51:28.955 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+16-Dec-2024 13:51:28.959 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.97]
+16-Dec-2024 13:55:20.217 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/sGQEvCLdzA=",
+  "dgSpecHash": "teEsZ6LD1pE=",
   "success": true,
   "projectFilePath": "/Users/mariapaz/GeneradorFacturasMasivas/GeneradorFacturasMasivas.csproj",
   "expectedPackageFiles": [
@@ -49,20 +49,9 @@
     "/Users/mariapaz/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
     "/Users/mariapaz/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/mariapaz/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
+    "/Users/mariapaz/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
     "/Users/mariapaz/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512",
-    "/Users/mariapaz/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.32/microsoft.netcore.app.host.osx-x64.6.0.32.nupkg.sha512",
-    "/Users/mariapaz/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512"
+    "/Users/mariapaz/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.32/microsoft.netcore.app.host.osx-x64.6.0.32.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "GeneradorFacturasMasivas depende de AspNetCore.Reporting (>= 2.0.0), pero no se encontró AspNetCore.Reporting 2.0.0. Se resolvió una mejor coincidencia aproximada de AspNetCore.Reporting 2.1.0.",
-      "libraryId": "AspNetCore.Reporting",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

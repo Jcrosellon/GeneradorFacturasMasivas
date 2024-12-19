@@ -2682,7 +2682,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AspNetCore.Reporting >= 2.0.0",
+      "AspNetCore.Reporting >= 2.1.0",
       "PdfSharpCore >= 1.3.65",
       "System.Data.SqlClient >= 4.8.6",
       "System.Security.Permissions >= 6.0.0"
@@ -2732,7 +2732,7 @@
         "dependencies": {
           "AspNetCore.Reporting": {
             "target": "Package",
-            "version": "[2.0.0, )"
+            "version": "[2.1.0, )"
           },
           "PdfSharpCore": {
             "target": "Package",
@@ -2780,17 +2780,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "GeneradorFacturasMasivas depende de AspNetCore.Reporting (>= 2.0.0), pero no se encontró AspNetCore.Reporting 2.0.0. Se resolvió una mejor coincidencia aproximada de AspNetCore.Reporting 2.1.0.",
-      "libraryId": "AspNetCore.Reporting",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

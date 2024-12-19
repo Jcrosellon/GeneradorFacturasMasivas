@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
+using RdlcRenderer;
 
 namespace GeneradorFacturasMasivas
 {
@@ -36,7 +36,7 @@ namespace GeneradorFacturasMasivas
                     Console.WriteLine(
                         $"Generando PDF para Cliente = {grupo[0].Cliente}, NumeroFactura = {grupo[0].NumeroFactura}"
                     );
-                    await GenerarPDFDesdeReportServer(grupo, carpetaFacturas);
+                    await GenerarPDFConRDLC(grupo, carpetaFacturas);
                 }
 
                 Console.WriteLine("Todas las facturas se generaron exitosamente.");
@@ -103,10 +103,7 @@ namespace GeneradorFacturasMasivas
             return facturas;
         }
 
-        private static async Task GenerarPDFDesdeReportServer(
-            List<Factura> facturas,
-            string carpetaFacturas
-        )
+        private static async Task GenerarPDFConRDLC(List<Factura> facturas, string carpetaFacturas)
         {
             if (facturas == null || facturas.Count == 0)
             {
@@ -121,39 +118,40 @@ namespace GeneradorFacturasMasivas
                 $"factura_{cliente}_{numeroFactura}.pdf"
             );
 
-            // URL ajustada para ReportServer
-            string reportServerUrl =
-                "http://localhost:8081/reportserver/reports/FacturaReport.rdlc";
-            var reportUrl = $"{reportServerUrl}?cliente={cliente}&numeroFactura={numeroFactura}";
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    HttpResponseMessage response = await client.GetAsync(reportUrl);
+            string pathReport = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "Reports",
+                "FacturaReport.rdlc"
+            );
 
-                    if (response.IsSuccessStatusCode)
+            // Crear renderer
+            var renderer = new ReportRenderer();
+            // Cargar el reporte
+            renderer.LoadReport(pathReport);
+
+            // Preparar el DataSource
+            var dataSource = facturas
+                .SelectMany(f =>
+                    f.Productos.Select(p => new
                     {
-                        var pdfBytes = await response.Content.ReadAsByteArrayAsync();
-                        await File.WriteAllBytesAsync(nombreArchivoPDF, pdfBytes);
-                        Console.WriteLine($"Reporte guardado en {nombreArchivoPDF}");
-                    }
-                    else
-                    {
-                        string errorMessage = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine(
-                            $"Error al obtener el reporte: {response.StatusCode} - {errorMessage}"
-                        );
-                    }
-                }
-                catch (HttpRequestException ex)
-                {
-                    Console.WriteLine($"Error de conexión: {ex.Message}");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error inesperado: {ex.Message}");
-                }
-            }
+                        f.Cliente,
+                        f.NumeroFactura,
+                        f.Fecha,
+                        Producto = p.Descripcion,
+                        p.Cantidad,
+                        p.VrUnitario,
+                        p.VrTotal,
+                    })
+                )
+                .ToList();
+
+            renderer.SetDataSource("FacturaDataSet", dataSource);
+
+            // Renderizar a PDF
+            var bytes = renderer.Render("PDF");
+
+            await File.WriteAllBytesAsync(nombreArchivoPDF, bytes);
+            Console.WriteLine($"Factura generada y guardada en {nombreArchivoPDF}");
         }
     }
 
